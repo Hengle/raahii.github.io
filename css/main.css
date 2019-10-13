@@ -106,9 +106,7 @@ img {
 }
 
 .nav-logo img {
-  display: block;
   max-height: 40px;
-  width: auto;
 }
 
 .nav-logo  p {
@@ -331,6 +329,7 @@ img {
   }
 
   .nav-logo img {
+    margin-top: 5px;
     max-height: 50px;
   }
 
