@@ -106,7 +106,9 @@ img {
 }
 
 .nav-logo img {
+  display: block;
   max-height: 40px;
+  width: auto;
 }
 
 .nav-logo  p {
@@ -301,6 +303,10 @@ img {
   margin-left: 2px;
 }
 
+.footer-links + .footer-links {
+  margin-top: 5px;
+}
+
 @media (min-width: 600px) {
   h1 {
     font-size: 28px;
@@ -329,7 +335,6 @@ img {
   }
 
   .nav-logo img {
-    margin-top: 5px;
     max-height: 50px;
   }
 
