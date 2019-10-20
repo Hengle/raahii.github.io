@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on 1ミリもわからん</title><link>https://raahii.github.io/tags/python/</link><description>Recent content in Python on 1ミリもわからん</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><lastBuildDate>Sun, 04 Aug 2019 04:13:59 +0900</lastBuildDate><atom:link href="https://raahii.github.io/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>画像データをサーバーにPOSTする</title><link>https://raahii.github.io/2019/08/04/files-upload/</link><pubDate>Sun, 04 Aug 2019 04:13:59 +0900</pubDate><guid>https://raahii.github.io/2019/08/04/files-upload/</guid><description>機械学習を使ったサービス/アプリを開発しているとクライアントから画像をサーバーに送って推論して結果を返す，ということをよくやるのでメモ．
+1枚しか送らない場合 今の所自分はこのパターンが多いです．いくつか実現方法はあると思いますが，リクエストボディに直接画像データのバイナリを入れて送る方法がシンプルで好きです．クライアント側のコードはこんな感じ．
+import json import urllib.parse import urllib.request # read image data f = open(&amp;#34;example.jpg&amp;#34;, &amp;#34;rb&amp;#34;) reqbody = f.read() f.close() # create request with urllib url = &amp;#34;http://localhost:5000&amp;#34; req = urllib.request.Request( url, reqbody, method=&amp;#34;POST&amp;#34;, headers={&amp;#34;Content-Type&amp;#34;: &amp;#34;application/octet-stream&amp;#34;}, ) # send the request and print response with urllib.request.urlopen(req) as res: print(json.loads(res.read())) 注意点として Content-Type に application/octet-stream を指定すると良いです．このMIMEタイプは曖昧なバイナリデータを指しており，ファイル種別を特に指定しないことを意味します（ref: MIME type: application/octet-stream ）．
+urllibの場合，これを指定しないとPOSTのデフォルトのMIMEタイプである application/x-www-form-urlencoded となり，サーバー側で正しく受け取れないので気をつけてください．
+一方でサーバー側（flaskの場合）のコードはこのようになります．画像データをOpenCVで読んで画像のshapeをjsonで返しています．
+@app.route(&amp;#34;/&amp;#34;, methods=[&amp;#34;POST&amp;#34;]) def example(): # read request body as byte array _bytes = np.</description></item><item><title>tensorboard-chainerにビデオを記録するためのPRを出した</title><link>https://raahii.github.io/2018/05/13/add-video-method-for-tensorboard-chainer/</link><pubDate>Sun, 13 May 2018 21:37:27 +0900</pubDate><guid>https://raahii.github.io/2018/05/13/add-video-method-for-tensorboard-chainer/</guid><description>機械学習における可視化ツールの1つにTensorBoardがある。これはTensorflowに付属しているソフトウェアで、学習時のlossやaccuracy、重みのヒストグラムなどを記録することができる。加えて、画像や音声などのデータも記録出来るので、生成モデルの学習でも便利に使える。
+自分は普段Chainerで書いていてそのままではtensorboardは使えないのでtensorboard-chainerを使わせてもらっている。これとてもありがたい。
+ただ、研究テーマが動画生成なので、動画も記録できれば便利なのに…とずっと思っていた。最近真面目にどうにか出来ないかと思って調べたら.gifの記録は元々できるらしいことがわかった。
+Video summary support · Issue #39 · tensorflow/tensorboard · GitHub ということで、動画を記録できるメソッドを実装してプルリクエストを出した。初めて出したのだけれど、カバレッジやコード規約をチェックしてくれるツールに初めて触れた。外からだとテストが通らなかった理由がいまいちわからないので若干困ったけど、慣れれば便利そう。とりあえずマージはされたので良かったです。
+add method &amp;ldquo;add_video&amp;rdquo; to SummaryWriter by raahii · Pull Request #2 · neka-nat/tensorboard-chainer · GitHub ということでtensorboard-chainerのadd_videoメソッドで動画記録できます。fpsも指定できます。便利。</description></item><item><title>imgcatコマンドで遊ぶ</title><link>https://raahii.github.io/2016/09/21/231012/</link><pubDate>Wed, 21 Sep 2016 23:10:00 +0900</pubDate><guid>https://raahii.github.io/2016/09/21/231012/</guid><description>近況
+インターンに行ってJavaを用いたWebアプリケーション開発を経験してきました。
+もともとサーバーサイドの方の知識は0に近く、データベースとかサーバーってめんどくさそう…くらいの認識でした。今回その辺りのコーディングをいくつか担当させて頂き、Webアプリの全体像が見えた気がします。とりあえず、Webアプリ開発を一通り経験したというのはとても大きな意味がありました。
+また、チーム開発が初めてだったこともあり、Gitを初めて実践的に使った他、かんばんやKPTといったアジャイル的な開発手法にも触れられたのも楽しかったです。
+imgcatコマンド がらっと話は変わりますが本題。みなさんimgcatというコマンドをご存知でしょうか。おそらくiTerm上でしか動かない…と思いますが、ターミナル上で画像を表示するコマンドです。
+これ、一見ネタのようなコマンドですが、Qiitaにはこんな記事が投稿されています。
+qiita.com
+いや、やっぱりネタかもしれない。
+こんなimgcatですが、もしかしたらこれってすごい力を秘めているのではないかと私は思いました。というのも、黒い画面というのはどうしても地味になりがちで、長時間コーディングをすると精神的に良くないと感じるからです。これを使えばもしかしたらターミナルが賑やかになるかもしれない...！
+GIPHYからGIF画像を取得して表示する ということで、いつまでも自分の手元にある画像を見ていても面白くないのでネットから拾ってきます。最初はGoogle画像検索を使おうと思っていましたが、最終的にGIPHYというサイトのAPIを使ってGIF画像を取ることにしました。そうです、imgcatでGIF画像を表示するとちゃんと動くんです！できたものはこんな感じ。
+猫。
+ピカチュウ。
+カートマン。
+GIPHYは海外サイトなので日本語では検索できませんが、結構素材は豊富っぽいです。
+ソースコード Pythonで書きました。簡単ですが...。 コレくらいだったらwgetとかでワンライナーで書けたりしそう。どうだろう。
+手順はこんな感じです。
+コマンドライン引数で検索ワードを受け取る
+GIPHYのAPIを使って画像を検索し、結果からランダムに一つをピックアップする
+選んだ画像のURLにHTTPリクエストを投げてかえってきた画像データをそのままバイナリで標準出力に流す
+imgcatにリダイレクトする
+GIPHYのAPIはGoogleのCustom Search APIと違って（おそらく）制限がないのと、現在public beta keyを出してくれてるので使うのが楽でした。
+また、今回使った検索以外にもトレンドの画像の取得や絵文字からGIFへの変換など色々できるようで今度使ってみたいなと思います。
+応用例 さて、そもそもこれを作ったワケというのは、黒い画面を眺め続け疲弊した心に安らぎをあたえてやることでした。
+一つ考えた例としてgit commitする度に好きなテーマの画像が表示されるようにします。zshrcに以下を追加。
+すると…
+予想外に地味😇。　今回は検索ワードを&#34;LGTM&#34;にしましたが、猫でいいかも。git commitをmycommitに置き換えなきゃいけないのはスマートじゃないですね。
+ということで、みなさんもくれぐれも心のケアは大切にして下さい（適当）。
+終わりに こういうの作ってる最中はいいんだけど、作り終わった後の賢者タイムの辛さ…ね…。
+所感 拾ってくる画像
+Twitterからとってきても面白いかも。
+最後の使い方の例のところ改良の余地有り
+元々git commitしたら画像を表示するというのは、たまたま見かけたcdしたらlsするという記事にヒントを得たものでした。なので本当はgit commit() { \gitcommit &#34;</description></item><item><title>外部モニターで動画を見ると辛い</title><link>https://raahii.github.io/2016/06/23/172816/</link><pubDate>Thu, 23 Jun 2016 17:28:00 +0900</pubDate><guid>https://raahii.github.io/2016/06/23/172816/</guid><description>こんにちは。EURO2016盛り上がってますね。みなさん見ていますか。明後日からはトーナメントが始まりますが僕の予想はコレです。
+フランス優勝とイタリアが勝ち上がるとこがミソです。山が違っていたら決勝はイタリアvsフランスにしてました。まぁぼく欧州サッカー全然知りませんけど笑
+という感じで、最近はEURO2016の試合ハイライトをよく見るのですが、動画鑑賞においてはMacbook Airが思ったより非力で辛いです。
+特に、外部モニタで視聴すると、うなる。
+ちなみに自分のMBAは2013年モデルの11インチで、cpuはi7の方なのですが、普通にMacのモニタで見ている分には特にcpu（ファン）は暴走しません。反対に、外部接続しているモニタは23インチで、これで見ているとcpuファンがかなり回り始めます。でかいモニタを使うとやはりレンダリングとかの関係で重いんですかね？
+ということで、ちょっと気になったので簡単に可視化してみました。
+方法はMacモニタと外部モニタでそれぞれ動画を最大化して視聴し、cpu使用率を計測します。ちなみにGoogle Chromeでニコニコ動画を見ました🍺。シンプル。
+一応少し頑張ってスクリプトを…。cpu使用率を取得するのはshellscriptで、グラフ化はpythonでやりました。
+んで結果、Macモニタの場合 外部モニタの場合
+という感じでした。グラフの背景が白で汚い…。
+とりあえず、外部モニタの場合，Macのモニタに比べて30%近くcpu使用率が高いという結果に。今回はMacを起動した後に、GoogleChromeだけを立ち上げて動画を視聴という流れで揃えたので、これでもcpu使用率は差が出てない方だと思います。普段からなんとなーくアクティビティモニタを開いて見たりしていますが、他のタブや他のアプリケーションを同時に開いていると、二倍近く差が出る時もあった気がします。やっぱりcpuが非力だと外部モニタって負荷でかいんですね…。
+あと、MacはIntelのcpuを積んでいるので、いい感じにオーバークロックして処理性能を上げる「Turbo Boost」という機能がついているみたい。ただ、排熱効率に優れないMacの場合これが原因でcpu温度がみるみる上昇していきます。cpu負荷が大きいプロセスを実行すると、このおせっかい機能によって熱暴走がおきてcpuファンの回転に拍車をかける─ これも原因の一つかなぁ。まぁそんな感じです。
+あと今回書いたスクリプトの方は、シェルスクリプトでpsコマンドの出力をcutできなくてちょっと躓きました。結局awkで解決したので、もっとawkを使いこなしたい。あと、シェルスクリプトはスペースが入る文字列を扱うときにわけわからなくなったりするので&#34;と&#39;の違いとかをちゃんと覚えないとダメかも。日頃からもっと頻繁に書いていきたいです。
+Pythonの方は去年一年間使ったのでわりとスラスラ書けた。最近はC/C++ばっかり使っているのであれだけど、やっぱりメソッドチェーンは慣れないと読みづらい気がする。matplotlibはとても使いやすいので好き。
+grep,sed,awk
+作者: 美吉明浩 出版社/メーカー: 秀和システム 発売日: 1998/05/29 メディア: 単行本 この商品を含むブログを見る
+コレ読みたい。それでは。</description></item><item><title>Pythonの日本語文字列</title><link>https://raahii.github.io/2015/06/28/211051/</link><pubDate>Sun, 28 Jun 2015 21:10:00 +0900</pubDate><guid>https://raahii.github.io/2015/06/28/211051/</guid><description>「研究者流コーディングの極意」を読んで、なんだかためになりそうだし、面白そうだし、ということで言語処理100本ノックを始めてみました。そして2つ目で詰まった(早い)。
+使っている言語はPythonで、使い始めたばかりなのですが、そもそもプログラミングがダメダメです。
+まず、その問題ですが、
+&amp;lt;blockquote&amp;gt; &amp;lt;p&amp;gt;01. 「パタトクカシーー」&amp;lt;br&amp;gt; 「パタトクカシーー」という文字列の1,3,5,7文字目を取り出して連結した文字列を得よ．
+&amp;lt;/blockquote&amp;gt; です。
+まず私が考えたのは、こんな感じです。なんの疑問もなくこれでいけるだろうと思ってました笑。
+string=&amp;ldquo;パタトクカシーー&amp;rdquo; rev=&amp;ldquo;&amp;rdquo; for i in [1,3,5,7]: rev+=string[i] print rev
+一方結果は、
+% python 01.「パタトクカシーー」.py �㿃 なんか文字化けしてる…。
+それもそのはずで、「パタトクカシーー」は全て全角文字なのでひとひねり必要です。一般に半角は1byte、全角は2byteに符号化されているので、配列のお部屋と1:1対応にならないのが原因。
+そしてPythonの場合、通常のstr型の全角文字は3byteに符号化されている（お部屋3つに対応している）みたいです。
+&amp;gt;&amp;gt;&amp;gt; &amp;lsquo;あ&amp;rsquo;[0] &amp;lsquo;\xe3&amp;rsquo; &amp;gt;&amp;gt;&amp;gt; &amp;lsquo;あ&amp;rsquo;[1] &amp;lsquo;\x81&amp;rsquo; &amp;gt;&amp;gt;&amp;gt; &amp;lsquo;あ&amp;rsquo;[2] &amp;lsquo;\x82&amp;rsquo; &amp;gt;&amp;gt;&amp;gt; &amp;lsquo;あ&amp;rsquo;[3] Traceback (most recent call last): File &amp;ldquo;&amp;lt;stdin&amp;gt;&amp;rdquo;, line 1, in &amp;lt;module&amp;gt; IndexError: string index out of range この記事が参考になりました。qiita.com
+これを知ったうえで愚直に書き換えると、
+string=&amp;ldquo;パタトクカシーー&amp;rdquo; rev=&amp;ldquo;&amp;rdquo; for i in [1,3,5,7]: for j in range(3):#全角なので rev+=string[3*i+j] print rev</description></item></channel></rss>

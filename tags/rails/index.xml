@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rails on 1ミリもわからん</title><link>https://raahii.github.io/tags/rails/</link><description>Recent content in Rails on 1ミリもわからん</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><lastBuildDate>Thu, 04 May 2017 01:03:00 +0900</lastBuildDate><atom:link href="https://raahii.github.io/tags/rails/index.xml" rel="self" type="application/rss+xml"/><item><title>Ruby(Rails)でGoogle Analytics APIを使う</title><link>https://raahii.github.io/2017/05/04/rails_google_analytics/</link><pubDate>Thu, 04 May 2017 01:03:00 +0900</pubDate><guid>https://raahii.github.io/2017/05/04/rails_google_analytics/</guid><description>今回RubyでGoogle Analytics APIを利用する機会があったのですが、思ったより情報が少ない上、必要な鍵ファイルやトークンがよくわからず時間を取られたので以下に手順をまとめておきます。
+Developers Consoleでプロジェクト作成・APIを有効化 まずはおなじみのやつですが、Googleのセットアップツールを利用するとパパッと完了できます。画面の表示に従ってプロジェクト作成→認証情報に進む→OAuthクライアント作成→完了と進めます。
+注意してほしいのが認証情報のところで、自分は以下のようにしました。最後の認証情報のダウンロードは不要です。
+サービスアカウントの作成 次にサービスアカウントページを開いて、プロジェクトを選択→サービス アカウントを作成→（サービス アカウントの名前を入力）→新しい秘密鍵の提供→作成を順にクリックします。公開キーと秘密キーのペアが生成されるので、client_secrets.p12というファイル名で保存します。
+また、サービスアカウントのIDを次で使うのでコピーしておいて下さい。
+Googleアナリティクスのユーザーにサービスアカウントを追加する 準備作業の最後として、アナリティクスデータの表示と分析の権限をサービスアカウントに付与します。自分のGoogleアナリティクスのページを開き、左タブの管理＞ビューの列のユーザー管理に進み、権限を付与するユーザーとして先ほどのサービスアカウントのIDを入力して追加します。
+また管理＞ビュー設定にあるビューIDをこの後使うのでコピーしておいて下さい。
+必要なパッケージをインストール RailsであればGemfileに追記します。
+gem &#39;google-api-client&#39;, &#39;~&amp;gt; 0.11&#39; bundle install 単にターミナルから使うのであれば以下。
+gem install google-api-client キーと設定ファイルを配置 そうしたら、ga_config.ymlという名前でyamlファイルを作成し、中身を記述します。以下を自分の情報と置き換えて下さい。
+サービスアカウントのID:
+Google Developers Consoleの左上のハンバーガーメニュー＞IAMと管理＞サービスアカウントで確認できます。
+アナリティクスのビューID:
+自分のアナリティクスのアカウントより、左タブ＞管理（歯車アイコン）＞ビュー設定より確認できます。
+サービスアカウントのキー:
+サービスアカウント作成の時に得たclient_secrets.p12を適当に配置してパスを記述します。
+サービスアカウントのキーのパスワード:
+特別設定していなければ&#39;notasecret&#39;のままでOKです。
+データを取得 以下がメインのスクリプトです。そのまま使う場合はとりあえずga_config.ymlやclient_secrets.p12と同ディレクトリに置くと動くと思います。
+start_dateやend_date、metrics、dimension、sortなどは必要に応じて変更して下さい。データの取得方法は共通だと思うので下記など他の情報を参照して下さい。
+github.com
+Railsアプリで使う場合 今回紹介したのはただのスクリプトですが、例えばランキングを作りたいといった場合にはアクセス数を利用してモデルに順位を付与したいと思います。そこで使えるのが、Railsの環境を読み込んだ上で任意のRubyコードが実行できるrails runnerです。またそういった独自のスクリプトみたいなものはlib/tasksに配置してrakeタスクとして使うほうが正しそう(?)です。またgithubで公開する場合などはキーファイルなどをリポジトリに含めないように注意して下さい。</description></item></channel></rss>
