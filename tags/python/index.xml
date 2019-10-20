@@ -7,7 +7,7 @@ urllibの場合，これを指定しないとPOSTのデフォルトのMIMEタイ
 自分は普段Chainerで書いていてそのままではtensorboardは使えないのでtensorboard-chainerを使わせてもらっている。これとてもありがたい。
 ただ、研究テーマが動画生成なので、動画も記録できれば便利なのに…とずっと思っていた。最近真面目にどうにか出来ないかと思って調べたら.gifの記録は元々できるらしいことがわかった。
 Video summary support · Issue #39 · tensorflow/tensorboard · GitHub ということで、動画を記録できるメソッドを実装してプルリクエストを出した。初めて出したのだけれど、カバレッジやコード規約をチェックしてくれるツールに初めて触れた。外からだとテストが通らなかった理由がいまいちわからないので若干困ったけど、慣れれば便利そう。とりあえずマージはされたので良かったです。
-add method &amp;ldquo;add_video&amp;rdquo; to SummaryWriter by raahii · Pull Request #2 · neka-nat/tensorboard-chainer · GitHub ということでtensorboard-chainerのadd_videoメソッドで動画記録できます。fpsも指定できます。便利。</description></item><item><title>imgcatコマンドで遊ぶ</title><link>https://raahii.github.io/2016/09/21/231012/</link><pubDate>Wed, 21 Sep 2016 23:10:00 +0900</pubDate><guid>https://raahii.github.io/2016/09/21/231012/</guid><description>近況
+add method &amp;ldquo;add_video&amp;rdquo; to SummaryWriter by raahii · Pull Request #2 · neka-nat/tensorboard-chainer · GitHub ということでtensorboard-chainerのadd_videoメソッドで動画記録できます。fpsも指定できます。便利。</description></item><item><title>imgcatコマンドで遊ぶ</title><link>https://raahii.github.io/2016/09/21/0921/</link><pubDate>Wed, 21 Sep 2016 23:10:00 +0900</pubDate><guid>https://raahii.github.io/2016/09/21/0921/</guid><description>近況
 インターンに行ってJavaを用いたWebアプリケーション開発を経験してきました。
 もともとサーバーサイドの方の知識は0に近く、データベースとかサーバーってめんどくさそう…くらいの認識でした。今回その辺りのコーディングをいくつか担当させて頂き、Webアプリの全体像が見えた気がします。とりあえず、Webアプリ開発を一通り経験したというのはとても大きな意味がありました。
 また、チーム開発が初めてだったこともあり、Gitを初めて実践的に使った他、かんばんやKPTといったアジャイル的な開発手法にも触れられたのも楽しかったです。
@@ -38,7 +38,7 @@ GIPHYのAPIはGoogleのCustom Search APIと違って（おそらく）制限が�
 所感 拾ってくる画像
 Twitterからとってきても面白いかも。
 最後の使い方の例のところ改良の余地有り
-元々git commitしたら画像を表示するというのは、たまたま見かけたcdしたらlsするという記事にヒントを得たものでした。なので本当はgit commit() { \gitcommit &#34;</description></item><item><title>外部モニターで動画を見ると辛い</title><link>https://raahii.github.io/2016/06/23/172816/</link><pubDate>Thu, 23 Jun 2016 17:28:00 +0900</pubDate><guid>https://raahii.github.io/2016/06/23/172816/</guid><description>こんにちは。EURO2016盛り上がってますね。みなさん見ていますか。明後日からはトーナメントが始まりますが僕の予想はコレです。
+元々git commitしたら画像を表示するというのは、たまたま見かけたcdしたらlsするという記事にヒントを得たものでした。なので本当はgit commit() { \gitcommit &#34;</description></item><item><title>外部モニターで動画を見ると辛い</title><link>https://raahii.github.io/2016/06/23/0623/</link><pubDate>Thu, 23 Jun 2016 17:28:00 +0900</pubDate><guid>https://raahii.github.io/2016/06/23/0623/</guid><description>こんにちは。EURO2016盛り上がってますね。みなさん見ていますか。明後日からはトーナメントが始まりますが僕の予想はコレです。
 フランス優勝とイタリアが勝ち上がるとこがミソです。山が違っていたら決勝はイタリアvsフランスにしてました。まぁぼく欧州サッカー全然知りませんけど笑
 という感じで、最近はEURO2016の試合ハイライトをよく見るのですが、動画鑑賞においてはMacbook Airが思ったより非力で辛いです。
 特に、外部モニタで視聴すると、うなる。
@@ -54,7 +54,7 @@ Twitterからとってきても面白いかも。
 Pythonの方は去年一年間使ったのでわりとスラスラ書けた。最近はC/C++ばっかり使っているのであれだけど、やっぱりメソッドチェーンは慣れないと読みづらい気がする。matplotlibはとても使いやすいので好き。
 grep,sed,awk
 作者: 美吉明浩 出版社/メーカー: 秀和システム 発売日: 1998/05/29 メディア: 単行本 この商品を含むブログを見る
-コレ読みたい。それでは。</description></item><item><title>Pythonの日本語文字列</title><link>https://raahii.github.io/2015/06/28/211051/</link><pubDate>Sun, 28 Jun 2015 21:10:00 +0900</pubDate><guid>https://raahii.github.io/2015/06/28/211051/</guid><description>「研究者流コーディングの極意」を読んで、なんだかためになりそうだし、面白そうだし、ということで言語処理100本ノックを始めてみました。そして2つ目で詰まった(早い)。
+コレ読みたい。それでは。</description></item><item><title>Pythonの日本語文字列</title><link>https://raahii.github.io/2015/06/28/0628/</link><pubDate>Sun, 28 Jun 2015 21:10:00 +0900</pubDate><guid>https://raahii.github.io/2015/06/28/0628/</guid><description>「研究者流コーディングの極意」を読んで、なんだかためになりそうだし、面白そうだし、ということで言語処理100本ノックを始めてみました。そして2つ目で詰まった(早い)。
 使っている言語はPythonで、使い始めたばかりなのですが、そもそもプログラミングがダメダメです。
 まず、その問題ですが、
 &amp;lt;blockquote&amp;gt; &amp;lt;p&amp;gt;01. 「パタトクカシーー」&amp;lt;br&amp;gt; 「パタトクカシーー」という文字列の1,3,5,7文字目を取り出して連結した文字列を得よ．
