@@ -203,6 +203,18 @@ img {
   background: #e5e5e5;
 }
 
+.list-content > ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list-content > ul > li {
+  padding-top: 4px;
+  margin: 0 10px;
+  list-style: none;
+}
+
 .highlight {
   border-radius: 3px;
   position: relative;
@@ -353,7 +365,7 @@ img {
   .content {
     font-size: 19px;
     line-height: 1.8;
-    margin: 100px auto;
+    margin: 80px auto;
   }
 
   .highlight {
