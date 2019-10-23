@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ネタ on 1ミリもわからん</title><link>https://raahii.github.io/tags/%E3%83%8D%E3%82%BF/</link><description>Recent content in ネタ on 1ミリもわからん</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><lastBuildDate>Sat, 01 Jul 2017 23:12:00 +0900</lastBuildDate><atom:link href="https://raahii.github.io/tags/%E3%83%8D%E3%82%BF/index.xml" rel="self" type="application/rss+xml"/><item><title>LaTeXiTで数式が表示されない問題</title><link>https://raahii.github.io/2017/07/01/0701/</link><pubDate>Sat, 01 Jul 2017 23:12:00 +0900</pubDate><guid>https://raahii.github.io/2017/07/01/0701/</guid><description>LaTeXiTはTeX数式を画像に変換できるツールですが、ついさっき使ったらプレビューに数式が表示されず、というか数式画像の生成自体に失敗しているみたいで全く使えないという事態に遭遇しました。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ネタ on 1ミリもわからん</title><link>https://raahii.github.io/tags/%E3%83%8D%E3%82%BF/</link><description>Recent content in ネタ on 1ミリもわからん</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><lastBuildDate>Sat, 01 Jul 2017 23:12:00 +0900</lastBuildDate><atom:link href="https://raahii.github.io/tags/%E3%83%8D%E3%82%BF/index.xml" rel="self" type="application/rss+xml"/><item><title>LaTeXiTで数式が表示されない問題</title><link>https://raahii.github.io/2017/07/01/latexit-bug/</link><pubDate>Sat, 01 Jul 2017 23:12:00 +0900</pubDate><guid>https://raahii.github.io/2017/07/01/latexit-bug/</guid><description>LaTeXiTはTeX数式を画像に変換できるツールですが、ついさっき使ったらプレビューに数式が表示されず、というか数式画像の生成自体に失敗しているみたいで全く使えないという事態に遭遇しました。
 思い当たったのは最近brew updateした時にghostscriptがアップデートされたことだったので確認。
-brew info ghostscript ghostscript: stable 9.21 (bottled), HEAD Interpreter for PostScript and PDF https://www.ghostscript.com/ /usr/local/Cellar/ghostscript/9.21_1 (8,484 files, 98.2MB) Poured from bottle on 2017-05-23 at 13:32:45 /usr/local/Cellar/ghostscript/9.21_2 (717 files, 64MB) * Poured from bottle on 2017-06-22 at 00:29:33 From: https://github.com/Homebrew/homebrew-core/blob/master/Formula/ghostscript.rb ==&amp;gt; Dependencies Build: pkg-config ✔ Required: little-cms2 ✔ ==&amp;gt; Requirements Optional: x11 ✔ ==&amp;gt; Options --with-x11 Build with x11 support --HEAD Install HEAD version 確かに06/22に更新している。なんとなく怪しいのでバージョンを下げたらなおった。</description></item><item><title>imgcatコマンドで遊ぶ</title><link>https://raahii.github.io/2016/09/21/0921/</link><pubDate>Wed, 21 Sep 2016 23:10:00 +0900</pubDate><guid>https://raahii.github.io/2016/09/21/0921/</guid><description>近況
+brew info ghostscript ghostscript: stable 9.21 (bottled), HEAD Interpreter for PostScript and PDF https://www.ghostscript.com/ /usr/local/Cellar/ghostscript/9.21_1 (8,484 files, 98.2MB) Poured from bottle on 2017-05-23 at 13:32:45 /usr/local/Cellar/ghostscript/9.21_2 (717 files, 64MB) * Poured from bottle on 2017-06-22 at 00:29:33 From: https://github.com/Homebrew/homebrew-core/blob/master/Formula/ghostscript.rb ==&amp;gt; Dependencies Build: pkg-config ✔ Required: little-cms2 ✔ ==&amp;gt; Requirements Optional: x11 ✔ ==&amp;gt; Options --with-x11 Build with x11 support --HEAD Install HEAD version 確かに06/22に更新している。なんとなく怪しいのでバージョンを下げたらなおった。</description></item><item><title>imgcatコマンドで遊ぶ</title><link>https://raahii.github.io/2016/09/21/show-lgtm-using-giphy-and-imgcat/</link><pubDate>Wed, 21 Sep 2016 23:10:00 +0900</pubDate><guid>https://raahii.github.io/2016/09/21/show-lgtm-using-giphy-and-imgcat/</guid><description>近況
 インターンに行ってJavaを用いたWebアプリケーション開発を経験してきました。
 もともとサーバーサイドの方の知識は0に近く、データベースとかサーバーってめんどくさそう…くらいの認識でした。今回その辺りのコーディングをいくつか担当させて頂き、Webアプリの全体像が見えた気がします。とりあえず、Webアプリ開発を一通り経験したというのはとても大きな意味がありました。
 また、チーム開発が初めてだったこともあり、Gitを初めて実践的に使った他、かんばんやKPTといったアジャイル的な開発手法にも触れられたのも楽しかったです。
@@ -31,7 +31,7 @@ GIPHYのAPIはGoogleのCustom Search APIと違って（おそらく）制限が�
 所感 拾ってくる画像
 Twitterからとってきても面白いかも。
 最後の使い方の例のところ改良の余地有り
-元々git commitしたら画像を表示するというのは、たまたま見かけたcdしたらlsするという記事にヒントを得たものでした。なので本当はgit commit() { \gitcommit &#34;</description></item><item><title>Chrome extensionに入門した</title><link>https://raahii.github.io/2016/08/12/0812/</link><pubDate>Fri, 12 Aug 2016 00:21:00 +0900</pubDate><guid>https://raahii.github.io/2016/08/12/0812/</guid><description>http://dotinstall.com/lessons/basic_chrome_v2dotinstall.com
+元々git commitしたら画像を表示するというのは、たまたま見かけたcdしたらlsするという記事にヒントを得たものでした。なので本当はgit commit() { \gitcommit &#34;</description></item><item><title>Chrome extensionに入門した</title><link>https://raahii.github.io/2016/08/12/window-operation-chrome-extension/</link><pubDate>Fri, 12 Aug 2016 00:21:00 +0900</pubDate><guid>https://raahii.github.io/2016/08/12/window-operation-chrome-extension/</guid><description>http://dotinstall.com/lessons/basic_chrome_v2dotinstall.com
 前回の記事でスターをつけてくださった方のブログを眺めていたらChromeの拡張機能を作っていて、Chromeの拡張機能ってHTML/CSS/JSだけで作れるのか！ということを知りました。せっかくの機会なので入門して自分なりに簡単な拡張機能を作ってみました。
 モチベーション シンプルにChromeを使っていて不便だと思う部分を解決するために作りました。
 私の考える問題点 例えば、Chromeでブラウジングしていて、最初はあることについて調べていたんだけど、気づいたら全く違うテーマのページを開いていた、なんてことありませんか？特に自分は学校の課題で調べ事してたんだけど退屈すぎていつの間にかネットサーフィンしてた、みたいなのがよくあります。
@@ -56,7 +56,7 @@ splitの逆で複数のwindowを1つにまとめられる機能があっても�
 最低限のデザインにしていきたいんだけど、レイアウトの仕方について要勉強。この手のページを作るとき、大体HTML/CSSを書くのにJavaScriptと同じくらい時間かかるのもどうにかしたい。 名前
 tabs_splitterなんかしっくりこない。英語的にもおかしい気がするしtabをキーワードとして残したい。
 所感 ボタンの名前をどう表記するのがベスト？
-単に split？それとももっと詳しく open right tabs in a new window？あるいは日本語で ◯◯◯？どれがわかりやすいんだろう。</description></item><item><title>Google Maps APIを使った標高の可視化</title><link>https://raahii.github.io/2016/07/24/0724/</link><pubDate>Sun, 24 Jul 2016 15:50:00 +0900</pubDate><guid>https://raahii.github.io/2016/07/24/0724/</guid><description>タイトルの通りGoogle Maps APIを使って、出発地点から目的地点までの高低差を可視化する簡単なサイトを作ってみました。
+単に split？それとももっと詳しく open right tabs in a new window？あるいは日本語で ◯◯◯？どれがわかりやすいんだろう。</description></item><item><title>Google Maps APIを使った標高の可視化</title><link>https://raahii.github.io/2016/07/24/visualize-elevation-along-the-route/</link><pubDate>Sun, 24 Jul 2016 15:50:00 +0900</pubDate><guid>https://raahii.github.io/2016/07/24/visualize-elevation-along-the-route/</guid><description>タイトルの通りGoogle Maps APIを使って、出発地点から目的地点までの高低差を可視化する簡単なサイトを作ってみました。
 ルートに沿った標高の可視化
 github.com
 きっかけとしては、新生活に伴い、家から大学までのルートの高低差を知りたかったからです。
@@ -70,7 +70,7 @@ github.com
 ルートラボ - LatLongLab
 Flattest Route
 と、機能や完成度・他サービスとの連携はまちまちですが既存のものも意外にありますね。(笑)
-NAVITIMEは坂の少ない／多いルートを選べ、かつ所要時間も出ていて素晴らしいです。ただちょっと図が小さめ。ルートラボはパッと検索するというよりは、ユーザー同士が作ったルートをシェアできる機能があって独特なサービスです。Flattest Routeはなんか動かない。とはいえ、今回の題材はコンセプトとしては意外と悪くなかったかなと思います。</description></item><item><title>外部モニターで動画を見ると辛い</title><link>https://raahii.github.io/2016/06/23/0623/</link><pubDate>Thu, 23 Jun 2016 17:28:00 +0900</pubDate><guid>https://raahii.github.io/2016/06/23/0623/</guid><description>こんにちは。EURO2016盛り上がってますね。みなさん見ていますか。明後日からはトーナメントが始まりますが僕の予想はコレです。
+NAVITIMEは坂の少ない／多いルートを選べ、かつ所要時間も出ていて素晴らしいです。ただちょっと図が小さめ。ルートラボはパッと検索するというよりは、ユーザー同士が作ったルートをシェアできる機能があって独特なサービスです。Flattest Routeはなんか動かない。とはいえ、今回の題材はコンセプトとしては意外と悪くなかったかなと思います。</description></item><item><title>外部モニターで動画を見ると辛い</title><link>https://raahii.github.io/2016/06/23/euro2016-result-prediction/</link><pubDate>Thu, 23 Jun 2016 17:28:00 +0900</pubDate><guid>https://raahii.github.io/2016/06/23/euro2016-result-prediction/</guid><description>こんにちは。EURO2016盛り上がってますね。みなさん見ていますか。明後日からはトーナメントが始まりますが僕の予想はコレです。
 フランス優勝とイタリアが勝ち上がるとこがミソです。山が違っていたら決勝はイタリアvsフランスにしてました。まぁぼく欧州サッカー全然知りませんけど笑
 という感じで、最近はEURO2016の試合ハイライトをよく見るのですが、動画鑑賞においてはMacbook Airが思ったより非力で辛いです。
 特に、外部モニタで視聴すると、うなる。
@@ -86,6 +86,6 @@ NAVITIMEは坂の少ない／多いルートを選べ、かつ所要時間も出
 Pythonの方は去年一年間使ったのでわりとスラスラ書けた。最近はC/C++ばっかり使っているのであれだけど、やっぱりメソッドチェーンは慣れないと読みづらい気がする。matplotlibはとても使いやすいので好き。
 grep,sed,awk
 作者: 美吉明浩 出版社/メーカー: 秀和システム 発売日: 1998/05/29 メディア: 単行本 この商品を含むブログを見る
-コレ読みたい。それでは。</description></item><item><title>Macならできること　ぱーと１</title><link>https://raahii.github.io/2016/06/05/0605/</link><pubDate>Sun, 05 Jun 2016 23:42:00 +0900</pubDate><guid>https://raahii.github.io/2016/06/05/0605/</guid><description>飯を食いながら記事が読みたい．でもご飯を口に入れながら上目遣いでディスプレイを見たり，片手にスマホを持ちながらみたいなのは嫌だという方．
+コレ読みたい。それでは。</description></item><item><title>Macならできること　ぱーと１</title><link>https://raahii.github.io/2016/06/05/say-command-read-article-for-you/</link><pubDate>Sun, 05 Jun 2016 23:42:00 +0900</pubDate><guid>https://raahii.github.io/2016/06/05/say-command-read-article-for-you/</guid><description>飯を食いながら記事が読みたい．でもご飯を口に入れながら上目遣いでディスプレイを見たり，片手にスマホを持ちながらみたいなのは嫌だという方．
 まず，必要に応じてイヤホンをしましょう． 読みたい記事のテキストを選択しクリップボードにコピーしましょう． ターミナルでpbpaste | sayとタイプしましょう． 以上です．高品質な音声合成技術に感謝しましょう． [補足]
 読み上げ時の声質を変更したい方はそういったことも可能です． ちょっと打つのがめんどくさいなという人はecho &#39;alias yomiage=&#34;pbpaste | say&#34;&#39; &amp;gt;&amp;gt; ~/.zshrcなどしましょう． そうMacなら，ね．</description></item></channel></rss>
