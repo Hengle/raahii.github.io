@@ -24,19 +24,19 @@ h6 {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 23px;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 a {
@@ -407,19 +407,19 @@ img {
 
 @media (min-width: 600px) {
   h1 {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   h4 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .header {
