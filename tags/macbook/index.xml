@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>macbook on 1ミリもわからん</title><link>https://raahii.github.io/tags/macbook/</link><description>Recent content in macbook on 1ミリもわからん</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><lastBuildDate>Wed, 21 Sep 2016 23:10:00 +0900</lastBuildDate><atom:link href="https://raahii.github.io/tags/macbook/index.xml" rel="self" type="application/rss+xml"/><item><title>imgcatコマンドで遊ぶ</title><link>https://raahii.github.io/2016/09/21/show-lgtm-using-giphy-and-imgcat/</link><pubDate>Wed, 21 Sep 2016 23:10:00 +0900</pubDate><guid>https://raahii.github.io/2016/09/21/show-lgtm-using-giphy-and-imgcat/</guid><description>近況
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>macbook on 1ミリもわからん</title><link>https://raahii.github.io/tags/macbook/</link><description>Recent content in macbook on 1ミリもわからん</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><lastBuildDate>Wed, 21 Sep 2016 23:10:00 +0900</lastBuildDate><atom:link href="https://raahii.github.io/tags/macbook/index.xml" rel="self" type="application/rss+xml"/><item><title>imgcatコマンドで遊ぶ</title><link>https://raahii.github.io/posts/show-lgtm-using-giphy-and-imgcat/</link><pubDate>Wed, 21 Sep 2016 23:10:00 +0900</pubDate><guid>https://raahii.github.io/posts/show-lgtm-using-giphy-and-imgcat/</guid><description>近況
 インターンに行ってJavaを用いたWebアプリケーション開発を経験してきました。
 もともとサーバーサイドの方の知識は0に近く、データベースとかサーバーってめんどくさそう…くらいの認識でした。今回その辺りのコーディングをいくつか担当させて頂き、Webアプリの全体像が見えた気がします。とりあえず、Webアプリ開発を一通り経験したというのはとても大きな意味がありました。
 また、チーム開発が初めてだったこともあり、Gitを初めて実践的に使った他、かんばんやKPTといったアジャイル的な開発手法にも触れられたのも楽しかったです。
@@ -29,7 +29,7 @@ GIPHYのAPIはGoogleのCustom Search APIと違って（おそらく）制限が�
 所感 拾ってくる画像
 Twitterからとってきても面白いかも。
 最後の使い方の例のところ改良の余地有り
-元々git commitしたら画像を表示するというのは、たまたま見かけたcdしたらlsするという記事にヒントを得たものでした。なので本当はgit commit() { \gitcommit &#34;</description></item><item><title>外部モニターで動画を見ると辛い</title><link>https://raahii.github.io/2016/06/23/euro2016-result-prediction/</link><pubDate>Thu, 23 Jun 2016 17:28:00 +0900</pubDate><guid>https://raahii.github.io/2016/06/23/euro2016-result-prediction/</guid><description>こんにちは。EURO2016盛り上がってますね。みなさん見ていますか。明後日からはトーナメントが始まりますが僕の予想はコレです。
+元々git commitしたら画像を表示するというのは、たまたま見かけたcdしたらlsするという記事にヒントを得たものでした。なので本当はgit commit() { \gitcommit &#34;</description></item><item><title>外部モニターで動画を見ると辛い</title><link>https://raahii.github.io/posts/euro2016-result-prediction/</link><pubDate>Thu, 23 Jun 2016 17:28:00 +0900</pubDate><guid>https://raahii.github.io/posts/euro2016-result-prediction/</guid><description>こんにちは。EURO2016盛り上がってますね。みなさん見ていますか。明後日からはトーナメントが始まりますが僕の予想はコレです。
 フランス優勝とイタリアが勝ち上がるとこがミソです。山が違っていたら決勝はイタリアvsフランスにしてました。まぁぼく欧州サッカー全然知りませんけど笑
 という感じで、最近はEURO2016の試合ハイライトをよく見るのですが、動画鑑賞においてはMacbook Airが思ったより非力で辛いです。
 特に、外部モニタで視聴すると、うなる。
