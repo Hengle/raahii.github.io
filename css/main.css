@@ -476,7 +476,7 @@ img {
 
   .archive-item-link {
     /* limit post title length */
-    max-width: 540px;
+    max-width: 520px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
